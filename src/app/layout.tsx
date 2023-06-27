@@ -1,6 +1,6 @@
-import FooterMobileNavbar from '@/components/FooterMobileNavbar/FooterMobileNavbar';
 import './globals.css';
-import Header from '@/components/FooterMobileNavbar/Header/Header';
+import FooterMobileNavbar from '@/components/FooterMobileNavbar/FooterMobileNavbar';
+import Header from '@/components/Header/Header';
 
 export const metadata = {
   title: 'ما کامرس',
