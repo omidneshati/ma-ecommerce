@@ -1,11 +1,5 @@
 {
-  "extends": [
-    "airbnb-base",
-    "airbnb-typescript/base",
-    "airbnb/hooks",
-    "next/core-web-vitals",
-    "prettier"
-  ],
+  "extends": ["airbnb-base", "airbnb-typescript/base", "next/core-web-vitals", "prettier"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
