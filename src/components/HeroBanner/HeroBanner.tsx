@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function HeroBanner() {
   return (
-    <div className="sm:h-[80vh] grid sm:grid-cols-3 sm:grid-rows-2 gap-3 max-w-screen-xl">
+    <div className="sm:h-[80vh] grid sm:grid-cols-3 sm:grid-rows-2 gap-3">
       <Link href="" className="relative block h-full col-span-2 row-span-2 ">
         <Image src="/images/img1.png" alt="img1" fill className="rounded-md" />
       </Link>
