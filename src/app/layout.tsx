@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="sm:mb-40" />
         <Header />
         {children}
-        <div className="mt-20 sm:m-0" />
+        <div className="mt-16 sm:m-0" />
         <FooterMobileNavbar />
       </body>
     </html>
