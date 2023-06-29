@@ -2,9 +2,9 @@ name: Integration
 
 on:
   push:
-    branches: [main, dev, github-actions]
+    branches: [main, dev, github-action]
   pull_request:
-    branches: [main, dev, github-actions]
+    branches: [main, dev, github-action]
 
 jobs:
   unit-test:
