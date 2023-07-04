@@ -6,7 +6,7 @@ import Navbar from './Navbar/Navbar';
 
 function Header() {
   return (
-    <nav className="fixed inset-x-0 top-0 justify-center hidden pt-2 shadow-md sm:flex">
+    <nav className="fixed inset-x-0 top-0 z-10 justify-center hidden pt-2 shadow-md sm:flex">
       <div className="flex flex-col justify-center w-full max-w-screen-xl ">
         <div className="flex justify-around pb-2 border-b border-gray-400">
           <Logo />
