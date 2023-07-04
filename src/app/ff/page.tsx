@@ -1,11 +1,11 @@
-import ProductCard from '@/components/ProductCard/ProductCard';
+import ProductsSlider from '@/components/OfferSection/ProductSlider/ProductsSlider';
 import ProductType from '@/interfaces/Product/Product';
 import getProduct from '@/utils/getProduct';
 
 async function FF() {
   try {
     const data: ProductType[] = await getProduct({ category: 'jewelery' });
-    return <ProductCard {...data[0]} />;
+    return <ProductsSlider productList={data} />;
   } catch (err) {
     console.log(err);
     return <div>dd</div>;
