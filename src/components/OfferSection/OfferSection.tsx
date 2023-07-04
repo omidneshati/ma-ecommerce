@@ -3,7 +3,7 @@ import ProductsSlider from './ProductSlider/ProductsSlider';
 
 async function OfferSection() {
   try {
-    const productList = await getProduct({ category: 'jewelery' });
+    const productList = await getProduct({ limit: 10 });
     return (
       <div>
         <ProductsSlider productList={productList} />

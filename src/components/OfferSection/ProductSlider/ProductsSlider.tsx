@@ -7,21 +7,27 @@ import ProductCard from '@/components/ProductCard/ProductCard';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/swiper-bundle.css';
 
 function ProductsSlider({ productList }: { productList: ProductType[] }) {
   return (
     // <ProductCard {...productList[0]} />
     <Swiper
+      className="flex justify-center"
+      breakpoints={{
+        768: {
+          width: 768,
+          slidesPerView: 5
+        }
+      }}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={3}
-      slidesPerView={3}
       navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}>
+      spaceBetween={5}
+      slidesPerView={1}>
       {productList.map((item) => (
-        <SwiperSlide key={item.title} className="my-3">
+        <SwiperSlide
+          key={item.title}
+          style={{ display: 'flex', justifyContent: 'center', padding: '6px 0' }}>
           <ProductCard {...item} />
         </SwiperSlide>
       ))}
