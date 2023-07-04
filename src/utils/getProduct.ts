@@ -4,13 +4,20 @@ import axios, { AxiosError } from 'axios';
 interface PropsType {
   id?: number;
   limit?: number;
-  category?: string;
+  category?: 'electronics' | 'jewelery' | "men's clothing" | "women's clothing";
+  sort?: 'desc' | 'asc';
 }
 
-const getProduct = async ({ id, category, limit }: PropsType) => {
+const getProduct = async ({ id, category, limit, sort }: PropsType) => {
   try {
-    const response = await instance.get(`products/${id}`, {
-      params: !id ? { category, limit } : {}
+    let url: string = 'products';
+    if (id) {
+      url = `products/${id}`;
+    } else if (category) {
+      url = `products/category/${category}`;
+    }
+    const response = await instance.get(url, {
+      params: { limit, sort }
     });
     const data = await response.data;
     return data;
