@@ -15,7 +15,7 @@ const PAGES_LINK: { label: string; link: string; Icon: Icon }[] = [
 function FooterMobileNavbar() {
   const { pathname } = useFooterMobileNavbar();
   return (
-    <div className="fixed inset-x-0 bottom-0 flex justify-around py-2 text-sm border-t border-gray-200 sm:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-10 flex justify-around py-2 text-sm bg-white border-t border-gray-200 sm:hidden">
       {PAGES_LINK.map((page) => (
         <Link href={page.link} key={page.label} className="grid place-items-center">
           <page.Icon variant={pathname === page.link ? 'Bold' : 'Outline'} />
