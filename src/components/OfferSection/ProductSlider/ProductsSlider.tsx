@@ -17,7 +17,7 @@ function ProductsSlider({ productList }: { productList: ProductType[] }) {
       breakpoints={{
         768: {
           width: 768,
-          slidesPerView: 5
+          slidesPerView: 3
         }
       }}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -27,7 +27,12 @@ function ProductsSlider({ productList }: { productList: ProductType[] }) {
       {productList.map((item) => (
         <SwiperSlide
           key={item.title}
-          style={{ display: 'flex', justifyContent: 'center', padding: '6px 0' }}>
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '6px 0',
+            minWidth: '200px'
+          }}>
           <ProductCard {...item} />
         </SwiperSlide>
       ))}
