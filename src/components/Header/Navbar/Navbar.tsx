@@ -1,13 +1,12 @@
 'use client';
 
-import { Category2, Diamonds, Home2, Icon } from 'iconsax-react';
+import { Category2, Home2, Icon } from 'iconsax-react';
 import Link from 'next/link';
 import useNavbar from './useNavbar';
 
 const HEADER_PAGES_LINKS: { label: string; link: string; Icon: Icon }[] = [
   { label: 'خانه', link: '/', Icon: Home2 },
-  { label: 'دسته بندی', link: '/category', Icon: Category2 },
-  { label: 'باشگاه مشتریان', link: '/club', Icon: Diamonds }
+  { label: 'دسته بندی', link: '/category', Icon: Category2 }
 ];
 
 function Navbar() {
