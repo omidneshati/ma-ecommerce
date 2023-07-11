@@ -15,9 +15,9 @@ async function Product({ params }: { params: { slug: string } }) {
           alt={title}
           width={150}
           height={150}
-          className="w-full bg-white rounded-md shadow-md p-[20%]"
+          className="w-full bg-white rounded-md shadow-md p-[20%] sm:h-[70vh]"
         />
-        <div className="flex flex-col gap-4 p-6">
+        <div className="flex flex-col justify-center gap-4 p-6">
           <div className="flex flex-col gap-6 text-justify" dir="ltr">
             <span className="text-3xl font-bold">{title}</span>
             <desc>{description}</desc>
