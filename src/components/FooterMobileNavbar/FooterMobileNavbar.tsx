@@ -1,13 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { Icon, Profile, Home2, Category2, Diamonds, ShoppingCart } from 'iconsax-react';
+import { Icon, Profile, Home2, Category2, ShoppingCart } from 'iconsax-react';
 import useFooterMobileNavbar from './useFooterMobileNavbar';
 
 const PAGES_LINK: { label: string; link: string; Icon: Icon }[] = [
   { label: 'خانه', link: '/', Icon: Home2 },
   { label: 'دسته بندی', link: '/category', Icon: Category2 },
-  { label: 'باشگاه مشتریان', link: '/club', Icon: Diamonds },
   { label: 'سبد خرید', link: '/cart', Icon: ShoppingCart },
   { label: 'پروفایل', link: '/profile', Icon: Profile }
 ];
