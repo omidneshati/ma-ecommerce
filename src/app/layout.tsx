@@ -10,12 +10,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="bg-gray-100 font-vazir">
-        <div className="sm:mb-40" />
-        <Header />
-        {children}
-        <div className="mt-16 sm:m-0" />
-        <FooterMobileNavbar />
+      <body className="flex justify-center bg-gray-100 font-vazir">
+        <div className="w-full max-w-screen-xl">
+          <div className="sm:mb-48" />
+          <Header />
+          {children}
+          <div className="mt-16 sm:m-0" />
+          <FooterMobileNavbar />
+        </div>
       </body>
     </html>
   );
