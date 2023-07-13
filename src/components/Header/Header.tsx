@@ -1,7 +1,8 @@
+import Link from 'next/link';
+import { Profile, ShoppingCart } from 'iconsax-react';
 import Searchbar from './Searchbar/Searchbar';
 import Logo from './Logo/Logo';
 import Navbar from './Navbar/Navbar';
-import HeaderProfile from '../HeaderProfile/HeaderProfile';
 
 function Header() {
   return (
@@ -11,7 +12,16 @@ function Header() {
           <Logo />
           <Searchbar />
           <div className="flex justify-center w-1/5 gap-2 p-2">
-            <HeaderProfile />
+            <Link
+              href="/profile"
+              className="grid w-12 h-12 transition-all duration-150 rounded-full hover:bg-gray-200 place-content-center">
+              <Profile />
+            </Link>
+            <Link
+              href="/cart"
+              className="grid w-12 h-12 transition-all duration-150 rounded-full hover:bg-gray-200 place-content-center">
+              <ShoppingCart />
+            </Link>
           </div>
         </div>
         <Navbar />
