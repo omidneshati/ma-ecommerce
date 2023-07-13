@@ -1,4 +1,4 @@
-export default function register({ name, phone }: { name: string; phone: number }) {
+export default function register({ name, password }: { name: string; password: string }) {
   localStorage.setItem('name', name);
-  localStorage.setItem('phone', phone.toString());
+  localStorage.setItem('password', password);
 }
