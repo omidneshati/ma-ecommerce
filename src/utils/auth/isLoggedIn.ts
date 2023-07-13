@@ -1,5 +1,5 @@
 export default function isLoggedIn() {
-  const loggedIn: boolean | null = Boolean(localStorage.getItem('loggedIn'));
-  if (loggedIn) return true;
+  const loggedIn: string | null = localStorage.getItem('loggedIn');
+  if (loggedIn === 'true') return true;
   return false;
 }
