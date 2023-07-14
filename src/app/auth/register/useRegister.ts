@@ -17,7 +17,7 @@ function useRegister() {
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     register({ name: inputName, password: inputPassword });
-    router.push('/profile');
+    router.push('/auth/login');
     return undefined;
   };
 

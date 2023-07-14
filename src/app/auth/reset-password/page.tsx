@@ -13,7 +13,7 @@ export default function ResetPassword() {
         onSubmit={submitHandler}>
         <p className="text-4xl font-bold">بازسازی رمز عبور</p>
         <div className="">
-          <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="name">
+          <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="code">
             کد ارسالی
           </label>
           <input
@@ -22,9 +22,9 @@ export default function ResetPassword() {
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
             type="text"
-            id="name"
-            name="name"
-            placeholder="امید نشاطی"
+            id="code"
+            name="code"
+            placeholder="123456"
           />
         </div>
         <div className="">
@@ -60,7 +60,7 @@ export default function ResetPassword() {
         <button
           className="w-full px-4 py-2 text-sm font-bold text-white transition duration-300 bg-indigo-500 rounded-md hover:bg-indigo-600"
           type="submit">
-          ثبت نام
+          ثبت
         </button>
         <Link href="/auth/login" className="py-4 text-blue-600">
           ورود
