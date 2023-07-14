@@ -1,5 +1,5 @@
-import { Profile, ShoppingCart } from 'iconsax-react';
 import Link from 'next/link';
+import { Profile, ShoppingCart } from 'iconsax-react';
 import Searchbar from './Searchbar/Searchbar';
 import Logo from './Logo/Logo';
 import Navbar from './Navbar/Navbar';
