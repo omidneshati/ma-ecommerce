@@ -1,4 +1,5 @@
 import isLoggedIn from '@/utils/auth/isLoggedIn';
+import logout from '@/utils/auth/logout';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 
@@ -43,6 +44,12 @@ const useProfile = () => {
     if (inputName) localStorage.setItem('name', inputName);
     if (inputPhone) localStorage.setItem('phone', inputPhone);
     if (inputAddress) localStorage.setItem('address', inputAddress);
+    setEditable(false);
+  };
+
+  const logoutHandler = () => {
+    logout();
+    router.push('/auth/login');
   };
 
   return {
@@ -54,7 +61,8 @@ const useProfile = () => {
     changeAddressHandler,
     changePhoneHandler,
     changeNameHandler,
-    submitHandler
+    submitHandler,
+    logoutHandler
   };
 };
 
