@@ -59,6 +59,9 @@ export default function Login() {
           type="submit">
           ورود
         </button>
+        <Link href="/auth/reset-password" className="py-4 text-blue-600">
+          فراموشی رمز عبور
+        </Link>
         <Link href="/auth/register" className="py-4 text-blue-600">
           ثبت نام
         </Link>
