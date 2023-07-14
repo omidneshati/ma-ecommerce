@@ -5,6 +5,5 @@ export default function login({ name, password }: { name: string; password: stri
     localStorage.setItem('loggedIn', 'true');
     return true;
   }
-  // localStorage.setItem('loggedIn', 'true');
   return false;
 }

@@ -11,7 +11,6 @@ import 'swiper/swiper-bundle.css';
 
 function ProductsSlider({ productList }: { productList: ProductType[] }) {
   return (
-    // <ProductCard {...productList[0]} />
     <Swiper
       className="flex justify-center"
       breakpoints={{

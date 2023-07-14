@@ -1,10 +1,9 @@
 import CategoryCard from '@/components/CategoryCard/CategoryCard';
 import getProduct from '@/utils/getProduct';
 
-async function Categories({ params }: { params: { slug: string } }) {
+async function Categories() {
   try {
     const categoryList: string[] = await getProduct({ categories: true });
-    console.log('params', params);
     const categoryAndImage = await Promise.all(
       categoryList.map(async (label) => {
         try {
