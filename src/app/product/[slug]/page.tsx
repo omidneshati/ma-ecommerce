@@ -1,3 +1,4 @@
+import AddToCartBtn from '@/components/AddToCartBtn/AddToCartBtn';
 import ProductType from '@/interfaces/Product/Product';
 import getProduct from '@/utils/getProduct';
 import Image from 'next/image';
@@ -5,7 +6,7 @@ import React from 'react';
 
 async function Product({ params }: { params: { slug: string } }) {
   try {
-    const res = await getProduct({ id: Number(params.slug) });
+    const res: ProductType = await getProduct({ id: Number(params.slug) });
 
     const { image, title, description, category, price }: ProductType = res;
     return (
@@ -24,9 +25,11 @@ async function Product({ params }: { params: { slug: string } }) {
           </div>
           <p className="p-5 text-2xl font-bold text-white bg-indigo-900">قیمت: {price}</p>
           <p>دسته بندی: {category}</p>
-          <button className="self-end px-6 py-4 text-white rounded-s-lg rounded-e-lg bg-cyan-700">
-            افزودن به سبد
-          </button>
+          <AddToCartBtn
+            product={res}
+            className="self-end px-6 py-4 text-white rounded-s-lg rounded-e-lg bg-cyan-700">
+            افزودن به سبد خرید
+          </AddToCartBtn>
         </div>
       </main>
     );
