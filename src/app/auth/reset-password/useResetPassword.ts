@@ -17,7 +17,7 @@ const useResetPassword = () => {
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     resetPassword({ code: inputResetCode, password: inputPassword });
-    router.push('/profile');
+    router.push('/auth/login');
     return undefined;
   };
 
