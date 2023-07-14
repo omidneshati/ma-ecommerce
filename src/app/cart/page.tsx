@@ -1,21 +1,21 @@
 'use client';
 
 import CartProductCard from '@/components/CartProductCard/CartProductCard';
-import getCartProducts from '@/utils/getCartProducts';
+import useCart from './useCart';
 
 function Cart() {
-  const cartProducts = getCartProducts();
+  const { products } = useCart();
   return (
-    <main className="max-w-screen-lg p-1 sm:p-6">
+    <main className="p-1 sm:p-6">
       <div>
         به دلیل استفاده از localStorage به جای data base بعد از هر تغییر صفحه را بازنشانی(reload)
         کنید
       </div>
       <p className="p-4 mb-4 text-4xl font-bold bg-white">سبد خرید</p>
       <div className="flex flex-col gap-6">
-        {cartProducts &&
-          Object.keys(cartProducts).map((id) => {
-            const { product, quantity } = cartProducts[Number(id)];
+        {products &&
+          Object.keys(products).map((id) => {
+            const { product, quantity } = products[Number(id)];
             return <CartProductCard key={id} product={product} quantity={quantity} />;
           })}
       </div>
