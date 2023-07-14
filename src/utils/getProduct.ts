@@ -4,10 +4,6 @@ import axios, { AxiosError } from 'axios';
 interface PropsType {
   id?: number;
   limit?: number;
-  categories?: boolean;
-  category?: string;
-  sort?: 'desc' | 'asc';
-}
 
 const getProduct = async ({ id, categories, category, limit, sort }: PropsType) => {
   try {

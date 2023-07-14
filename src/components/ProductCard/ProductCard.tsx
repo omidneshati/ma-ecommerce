@@ -1,5 +1,3 @@
-'use client';
-
 import ProductType from '@/interfaces/Product/Product';
 import toFarsiNumber from '@/utils/toFarsiNumber';
 import Image from 'next/image';
