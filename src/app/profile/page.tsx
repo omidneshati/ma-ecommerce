@@ -35,7 +35,7 @@ function Profile() {
               type="text"
               id="name"
               name="name"
-              placeholder="John Doe"
+              placeholder="امید نشاطی"
             />
           </div>
           <div>
