@@ -1,14 +1,19 @@
+'use client';
+
 import isLoggedIn from '@/utils/auth/isLoggedIn';
 import logout from '@/utils/auth/logout';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 
 const useProfile = () => {
-  const loggedIn = isLoggedIn();
   const router = useRouter();
-  if (!loggedIn) {
-    router.replace('/auth/login');
-  }
+
+  useEffect(() => {
+    const loggedIn = isLoggedIn();
+    if (!loggedIn) {
+      router.replace('/auth/login');
+    }
+  }, [router]);
 
   const [editable, setEditable] = useState<boolean>(false);
   const [inputName, setInputName] = useState<string>('');
